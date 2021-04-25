@@ -44,6 +44,7 @@ class QuizFragment : Fragment() {
                     viewModel.onCorrect()
                 }
 
+                binding.answerBox.clearCheck() // clear RB
 
                 viewModel.nextQuestion()
 
