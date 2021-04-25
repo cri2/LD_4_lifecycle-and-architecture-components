@@ -1,4 +1,4 @@
-package com.example.mad03_fragments_and_navigation
+package com.example.mad03_fragments_and_navigation.fragments
 
 import android.os.Bundle
 import android.view.*
@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.mad03_fragments_and_navigation.R
 import com.example.mad03_fragments_and_navigation.adapters.MovieListAdapter
 import com.example.mad03_fragments_and_navigation.databinding.FragmentHomeBinding
 import com.example.mad03_fragments_and_navigation.models.MovieStore
@@ -18,7 +19,8 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
+        binding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_home, container, false)
 
         setHasOptionsMenu(true) // enable the options menu in the action bar
 

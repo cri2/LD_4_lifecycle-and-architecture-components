@@ -8,7 +8,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.mad03_fragments_and_navigation.databinding.ActivityMainBinding
-import android.util.Log
+import android.util.Log //new acc. template
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        Log.i("MainActivity", "I am onCreate")
+        Log.i("MainActivity", "I am onCreate") //acc. template
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(binding.navView, navController)
     }
 
+    // acc. template
     override fun onSupportNavigateUp(): Boolean {
         return NavigationUI.navigateUp(navController, drawerLayout)
     }

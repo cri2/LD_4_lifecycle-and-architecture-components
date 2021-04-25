@@ -1,4 +1,4 @@
-package com.example.mad03_fragments_and_navigation
+package com.example.mad03_fragments_and_navigation.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
+import com.example.mad03_fragments_and_navigation.fragments.MovieDetailFragmentArgs
+import com.example.mad03_fragments_and_navigation.R
 import com.example.mad03_fragments_and_navigation.databinding.FragmentMovieDetailBinding
 import com.example.mad03_fragments_and_navigation.models.MovieStore
 
@@ -18,9 +20,13 @@ class MovieDetailFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_movie_detail, container, false)
+        binding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_movie_detail, container, false)
 
-        val args = MovieDetailFragmentArgs.fromBundle(requireArguments())   // get navigation arguments
+        val args =
+            MovieDetailFragmentArgs.fromBundle(
+                requireArguments()
+            )   // get navigation arguments
 
         when(val movieEntry = MovieStore().findMovieByUUID(args.movieId)){
             null -> {
